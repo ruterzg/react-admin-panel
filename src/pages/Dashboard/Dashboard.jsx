@@ -1,6 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import CircularCard from "../../components/CircularCard/CircularCard";
+import { ResponsiveContainer } from "recharts";
 
 function Dashboard() {
   return (
@@ -47,44 +48,24 @@ function Dashboard() {
         </Button>
       </Box>
 
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          columnGap: "40px",
-          mt: "-65px",
-        }}
-      >
-        <CircularCard
-          color="#3A57E8"
-          value={90}
-          title="Total Sales"
-          price="$560K"
-        />
-        <CircularCard
-          color="#08B1BA"
-          value={80}
-          title="Total Profit"
-          price="$185K"
-        />
-        <CircularCard
-          color="#3A57E8"
-          value={70}
-          title="Total Cost"
-          price="$375K"
-        />
-        <CircularCard
-          color="#08B1BA"
-          value={62}
-          title="Revenue"
-          price="$742K"
-        />
-        <CircularCard
-          color="#08B1BA"
-          value={62}
-          title="Revenue"
-          price="$742K"
-        />
+      <Box sx={{ display: "flex", mt: "100px" }}>
+        <Box
+          sx={{ flexBasis: "70%", display: "flex", flexDirection: "column" }}
+        >
+          <ResponsiveContainer
+            width="100%"
+            height={447}
+            style={{ background: "#fff" }}
+          >
+            <div
+              style={{
+                padding: "15px",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            ></div>
+          </ResponsiveContainer>
+        </Box>
       </Box>
     </Box>
   );
